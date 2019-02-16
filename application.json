@@ -8,7 +8,7 @@
         {
           "id": "build",
           "name": "Build",
-          "master": "http://jenkins.customer.test:8080/jenkins/",
+          "master": "http://localhost",
           "job": "devoptics-quickstart/master",
           "feeds": "tests"
         }
@@ -21,7 +21,7 @@
         {
           "id": "tests",
           "name": "Tests",
-          "master": "http://jenkins.customer.test:8080/jenkins/",
+          "master": "http://localhost",
           "job": "devoptics-quickstart/tests",
           "feeds": "staging"
         }
@@ -34,7 +34,7 @@
         {
           "id": "staging",
           "name": "Staging",
-          "master": "http://jenkins.customer.test:8080/jenkins/",
+          "master": "http://localhost",
           "job": "devoptics-quickstart/staging",
           "feeds": "integration-tests"
         }
@@ -47,7 +47,7 @@
         {
           "id": "integration-tests",
           "name": "Integration Tests",
-          "master": "http://jenkins.customer.test:8080/jenkins/",
+          "master": "http://localhost",
           "job": "devoptics-quickstart/integration-tests",
           "feeds": "production"
         }
@@ -60,7 +60,7 @@
         {
           "id": "production",
           "name": "Production",
-          "master": "http://jenkins.customer.test:8080/jenkins/",
+          "master": "http://localhost",
           "job": "devoptics-quickstart-freestyle"
         }
       ]
