@@ -1,0 +1,69 @@
+{
+  "name": "DevOptics Quickstart App",
+  "phases": [
+    {
+      "id": "build",
+      "name": "Build",
+      "gates": [
+        {
+          "id": "build",
+          "name": "Build",
+          "master": "http://35.228.199.222",
+          "job": "devoptics-quickstart/master",
+          "feeds": "tests"
+        }
+      ]
+    },
+    {
+      "id": "tests",
+      "name": "Tests",
+      "gates": [
+        {
+          "id": "tests",
+          "name": "Tests",
+          "master": "http://35.228.199.222",
+          "job": "devoptics-quickstart/tests",
+          "feeds": "staging"
+        }
+      ]
+    },
+    {
+      "id": "staging",
+      "name": "Staging",
+      "gates": [
+        {
+          "id": "staging",
+          "name": "Staging",
+          "master": "http://35.228.199.222",
+          "job": "devoptics-quickstart/staging",
+          "feeds": "integration-tests"
+        }
+      ]
+    },
+    {
+      "id": "integration-tests",
+      "name": "Integration Tests",
+      "gates": [
+        {
+          "id": "integration-tests",
+          "name": "Integration Tests",
+          "master": "http://35.228.199.222",
+          "job": "devoptics-quickstart/integration-tests",
+          "feeds": "production"
+        }
+      ]
+    },
+    {
+      "id": "production",
+      "name": "Production",
+      "gates": [
+        {
+          "id": "production",
+          "name": "Production",
+          "master": "http://35.228.199.222",
+          "job": "devoptics-quickstart-freestyle"
+        }
+      ]
+    }
+  ]
+}
